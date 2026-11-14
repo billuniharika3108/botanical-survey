@@ -90,23 +90,29 @@ for (let i = 1; i <= 6; i++) {
 function showWeek(number) {
     weekTitle.textContent = `Week ${number} - Activity Report`;
 
+    // Display separate photo for Week 1
+    let weekPhoto = document.getElementById("weekPhoto");
+
+    if (!weekPhoto) {
+        weekPhoto = document.createElement("div");
+        weekPhoto.id = "weekPhoto";
+        activityPanel.appendChild(weekPhoto);
+    }
+
+    weekPhoto.innerHTML = "";
+
+    if (number === 1) {
+        weekPhoto.innerHTML = `
+            <h3>Week 1 - Field Visit Photo</h3>
+            <img
+                src="WhatsApp%20Image%202026-11-14%20at%201.47.37%20PM.jpeg"
+                alt="Week 1 Photo"
+                class="activity-photo"
+            >
+        `;
+    }
+
     activityRows.innerHTML = "";
-
-    weeks[number].forEach(activity => {
-        const row = document.createElement("tr");
-
-        activity.forEach(detail => {
-            const cell = document.createElement("td");
-            cell.textContent = detail;
-            row.appendChild(cell);
-        });
-
-        const signature = document.createElement("td");
-        signature.className = "signature-cell";
-        row.appendChild(signature);
-
-        activityRows.appendChild(row);
-    });
 
     homeSection.hidden = true;
     activityPanel.hidden = false;
