@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Community Service Project - Six Week Activity Log">
+  <title>CSP Project | Six Week Activity Log</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">COMMUNITY SERVICE PROJECT</p>
+      <h1>Six Week Activity Log</h1>
+      <p class="subtitle">Explore the activities and learning outcomes from Week 1 to Week 6.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="week-section" aria-labelledby="weeks-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PROJECT JOURNAL</p>
+          <h2 id="weeks-heading">Select a Week</h2>
+        </div>
+        <p class="hint">Choose any week to view its six-day activity record.</p>
+      </div>
+      <div class="week-grid" id="weekGrid"></div>
+    </section>
+
+    <section class="activity-panel" id="activityPanel" hidden>
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">CSP ACTIVITY RECORD</p>
+          <h2 id="weekTitle">Activity Log</h2>
+        </div>
+        <button class="back-button" id="backButton" type="button">← All weeks</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Days</th>
+              <th>Brief Description of the Daily Activity</th>
+              <th>Learning Outcome</th>
+              <th>Person In-charge Signature</th>
+            </tr>
+          </thead>
+          <tbody id="activityRows"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Community Service Project · Six Week Activity Log</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
