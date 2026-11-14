@@ -168,3 +168,14 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+#weekPhoto {
+    text-align: center;
+    margin: 25px auto;
+}
+
+.activity-photo {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    border-radius: 12px;
+}
