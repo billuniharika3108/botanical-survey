@@ -87,7 +87,38 @@ for (let i = 1; i <= 6; i++) {
 
     weekGrid.appendChild(button);
 }
+// Separate activity photos for each week
+const weekPhotos = {
+    1: [
+        "images/week1-1.jpg",
+        "images/week1-2.jpg"
+    ],
 
+    2: [
+        "images/week2-1.jpg",
+        "images/week2-2.jpg"
+    ],
+
+    3: [
+        "images/week3-1.jpg",
+        "images/week3-2.jpg"
+    ],
+
+    4: [
+        "images/week4-1.jpg",
+        "images/week4-2.jpg"
+    ],
+
+    5: [
+        "images/week5-1.jpg",
+        "images/week5-2.jpg"
+    ],
+
+    6: [
+        "images/week6-1.jpg",
+        "images/week6-2.jpg"
+    ]
+};
 function showWeek(number) {
     weekTitle.textContent = `Week ${number} - Activity Report`;
 
