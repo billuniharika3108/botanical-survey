@@ -179,3 +179,35 @@ footer {
     height: auto;
     border-radius: 12px;
 }
+/* Weekly Activity Photo Gallery */
+
+.photo-heading {
+    color: #205b35;
+    margin: 25px 0 15px;
+}
+
+.week-photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 20px 0 30px;
+}
+
+.activity-photo {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #d5e8d5;
+    box-shadow: 0 4px 12px #00000018;
+}
+
+@media (max-width: 600px) {
+    .week-photos {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-photo {
+        height: auto;
+    }
+}
