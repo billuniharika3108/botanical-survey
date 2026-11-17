@@ -1,4 +1,6 @@
 
+/* GENERAL SETTINGS */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +13,9 @@ body {
     color: #263d2b;
     line-height: 1.6;
 }
+
+
+/* HEADER */
 
 .hero {
     background: linear-gradient(135deg, #123d25, #38834b);
@@ -38,11 +43,17 @@ body {
     margin-bottom: 10px;
 }
 
+
+/* MAIN CONTAINER */
+
 .container {
     max-width: 1150px;
     margin: auto;
     padding: 30px 18px;
 }
+
+
+/* STUDENT DETAILS AND INTRO */
 
 .college,
 .intro {
@@ -64,11 +75,17 @@ body {
     border-bottom: 1px solid #e0eadf;
 }
 
+
+/* SECTION TITLES */
+
 .section-title {
     text-align: center;
     color: #205b35;
     margin: 35px 0 22px;
 }
+
+
+/* SIX WEEKS ACTIVITY CARDS */
 
 .week-grid {
     display: grid;
@@ -95,6 +112,9 @@ body {
     transform: translateY(-5px);
 }
 
+
+/* BACK BUTTON */
+
 .back-btn {
     background: #286b3e;
     color: white;
@@ -110,76 +130,13 @@ body {
     margin-bottom: 20px;
 }
 
-.table-wrap {
-    overflow-x: auto;
-}
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    min-width: 750px;
-}
+/* WEEKLY ACTIVITY PHOTOS */
 
-th, td {
-    border: 1px solid #b8cfba;
-    padding: 13px;
-    text-align: left;
-}
-
-th {
-    background: #286b3e;
-    color: white;
-}
-
-tr:nth-child(even) {
-    background: #f0f7ef;
-}
-
-.signature-cell {
-    min-width: 160px;
-    height: 65px;
-}
-
-footer {
-    background: #153e27;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    margin-top: 40px;
-}
-
-[hidden] {
-    display: none !important;
-}
-
-@media (max-width: 700px) {
-    .week-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .hero h1 {
-        font-size: 27px;
-    }
-}
-
-@media (max-width: 420px) {
-    .week-grid {
-        grid-template-columns: 1fr;
-    }
-}
 #weekPhoto {
     text-align: center;
     margin: 25px auto;
 }
-
-.activity-photo {
-    width: 100%;
-    max-width: 650px;
-    height: auto;
-    border-radius: 12px;
-}
-/* Weekly Activity Photo Gallery */
 
 .photo-heading {
     color: #205b35;
@@ -202,12 +159,8 @@ footer {
     box-shadow: 0 4px 12px #00000018;
 }
 
-@media (max-width: 600px) {
-    .week-photos {
-        grid-template-columns: 1fr;
-    }
 
-/* ALL SIX WEEKS ACTIVITY PHOTO GALLERY */
+/* ACTIVITY PHOTO GALLERY - ALL SIX WEEKS */
 
 .activity-gallery {
     margin: 50px auto;
@@ -222,23 +175,37 @@ footer {
     margin-bottom: 25px;
 }
 
+.gallery-intro {
+    text-align: center;
+    color: #526052;
+    margin-bottom: 25px;
+}
+
 .gallery-week-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 25px;
 }
 
 .gallery-week {
     background: white;
-    padding: 18px;
-    border-radius: 12px;
-    box-shadow: 0 3px 12px #00000012;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #d5e8d5;
+    box-shadow: 0 4px 15px #00000015;
+    transition: 0.3s;
+}
+
+.gallery-week:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 18px #00000020;
 }
 
 .gallery-week h3 {
     text-align: center;
-    color: #205b35;
-    margin-bottom: 15px;
+    color: #21653a;
+    margin-bottom: 18px;
+    font-size: 22px;
 }
 
 .gallery-photo-grid {
@@ -248,24 +215,114 @@ footer {
 }
 
 .gallery-photo-grid img {
+    display: block;
     width: 100%;
-    height: 180px;
+    height: 190px;
     object-fit: cover;
     border-radius: 10px;
-    border: 3px solid #d5e8d5;
+    border: 2px solid #d5e8d5;
+    background: #e8f1e6;
 }
 
+
+/* TABLE */
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    min-width: 750px;
+}
+
+th,
+td {
+    border: 1px solid #b8cfba;
+    padding: 13px;
+    text-align: left;
+}
+
+th {
+    background: #286b3e;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f0f7ef;
+}
+
+.signature-cell {
+    min-width: 160px;
+    height: 65px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #153e27;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+
+/* HIDDEN SECTIONS */
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* TABLET RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .week-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+}
+
+
+/* MOBILE RESPONSIVE */
+
 @media (max-width: 600px) {
+
+    .week-photos {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-photo {
+        height: auto;
+    }
+
     .gallery-week-grid {
         grid-template-columns: 1fr;
     }
 
     .gallery-photo-grid img {
-        height: 150px;
+        height: 160px;
     }
+
 }
 
-    .activity-photo {
-        height: auto;
+
+/* SMALL MOBILE */
+
+@media (max-width: 420px) {
+
+    .week-grid {
+        grid-template-columns: 1fr;
     }
+
 }
+
