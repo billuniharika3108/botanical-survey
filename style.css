@@ -207,6 +207,64 @@ footer {
         grid-template-columns: 1fr;
     }
 
+/* ALL SIX WEEKS ACTIVITY PHOTO GALLERY */
+
+.activity-gallery {
+    margin: 50px auto;
+    padding: 25px;
+    background: #f5faf4;
+    border-radius: 15px;
+}
+
+.activity-gallery h2 {
+    text-align: center;
+    color: #205b35;
+    margin-bottom: 25px;
+}
+
+.gallery-week-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.gallery-week {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000012;
+}
+
+.gallery-week h3 {
+    text-align: center;
+    color: #205b35;
+    margin-bottom: 15px;
+}
+
+.gallery-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.gallery-photo-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #d5e8d5;
+}
+
+@media (max-width: 600px) {
+    .gallery-week-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-photo-grid img {
+        height: 150px;
+    }
+}
+
     .activity-photo {
         height: auto;
     }
