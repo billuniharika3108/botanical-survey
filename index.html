@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Botanical Survey | Community Service Project</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<!-- HEADER -->
 <header class="hero">
     <div class="leaf">🌿</div>
     <h1>BOTANICAL SURVEY</h1>
@@ -16,15 +20,20 @@
     <p>Exploring Plants • Protecting Nature • Creating Awareness</p>
 </header>
 
+
 <main class="container">
 
+    <!-- STUDENT DETAILS -->
     <section class="college">
         <h2>Student Details</h2>
         <div id="students"></div>
     </section>
 
+
+    <!-- ABOUT PROJECT -->
     <section class="intro">
         <h2>About Our Project</h2>
+
         <p>
             This Community Service Project focuses on studying different
             types of plants, their growth, importance, environmental factors,
@@ -34,19 +43,36 @@
         </p>
     </section>
 
+
+    <!-- SIX WEEKS ACTIVITIES -->
     <section id="homeSection">
+
         <h2 class="section-title">Our Six Weeks Activities</h2>
+
         <div class="week-grid" id="weekGrid"></div>
+
     </section>
 
+
+    <!-- WEEKLY ACTIVITY DETAILS -->
     <section id="activityPanel" hidden>
-        <button id="backButton" class="back-btn">← Back to Home</button>
+
+        <button id="backButton" class="back-btn">
+            ← Back to Home
+        </button>
+
         <h2 id="weekTitle"></h2>
-    <h3 class="photo-heading">📸 Weekly Activity Photos</h3>
-    <div id="weekPhotos" class="week-photos"></div>
-        
+
+        <h3 class="photo-heading">
+            📸 Weekly Activity Photos
+        </h3>
+
+        <div id="weekPhotos" class="week-photos"></div>
+
         <div class="table-wrap">
+
             <table>
+
                 <thead>
                     <tr>
                         <th>Days</th>
@@ -55,78 +81,158 @@
                         <th>Person In-charge Signature</th>
                     </tr>
                 </thead>
+
                 <tbody id="activityRows"></tbody>
+
             </table>
+
         </div>
+
     </section>
 
+
+    <!-- ALL SIX WEEKS PHOTO GALLERY -->
+    <section id="activityGallery" class="activity-gallery">
+
+        <h2 class="section-title">
+            📸 Activity Photos – All Six Weeks
+        </h2>
+
+        <p class="gallery-intro">
+            Glimpses of our Community Service Project activities.
+        </p>
+
+        <div class="gallery-week-grid">
+
+
+            <!-- WEEK 1 -->
+            <div class="gallery-week">
+
+                <h3>🌿 Week 1</h3>
+
+                <div class="gallery-photo-grid">
+
+                    <img src="images/week1-1.jpg"
+                         alt="Week 1 Activity Photo 1">
+
+                    <img src="images/week1-2.jpg"
+                         alt="Week 1 Activity Photo 2">
+
+                </div>
+
+            </div>
+
+
+            <!-- WEEK 2 -->
+            <div class="gallery-week">
+
+                <h3>🌿 Week 2</h3>
+
+                <div class="gallery-photo-grid">
+
+                    <img src="images/week2-1.jpg"
+                         alt="Week 2 Activity Photo 1">
+
+                    <img src="images/week2-2.jpg"
+                         alt="Week 2 Activity Photo 2">
+
+                </div>
+
+            </div>
+
+
+            <!-- WEEK 3 -->
+            <div class="gallery-week">
+
+                <h3>🌿 Week 3</h3>
+
+                <div class="gallery-photo-grid">
+
+                    <img src="images/week3-1.jpg"
+                         alt="Week 3 Activity Photo 1">
+
+                    <img src="images/week3-2.jpg"
+                         alt="Week 3 Activity Photo 2">
+
+                </div>
+
+            </div>
+
+
+            <!-- WEEK 4 -->
+            <div class="gallery-week">
+
+                <h3>🌿 Week 4</h3>
+
+                <div class="gallery-photo-grid">
+
+                    <img src="images/week4-1.jpg"
+                         alt="Week 4 Activity Photo 1">
+
+                    <img src="images/week4-2.jpg"
+                         alt="Week 4 Activity Photo 2">
+
+                </div>
+
+            </div>
+
+
+            <!-- WEEK 5 -->
+            <div class="gallery-week">
+
+                <h3>🌿 Week 5</h3>
+
+                <div class="gallery-photo-grid">
+
+                    <img src="images/week5-1.jpg"
+                         alt="Week 5 Activity Photo 1">
+
+                    <img src="images/week5-2.jpg"
+                         alt="Week 5 Activity Photo 2">
+
+                </div>
+
+            </div>
+
+
+            <!-- WEEK 6 -->
+            <div class="gallery-week">
+
+                <h3>🌿 Week 6</h3>
+
+                <div class="gallery-photo-grid">
+
+                    <img src="images/week6-1.jpg"
+                         alt="Week 6 Activity Photo 1">
+
+                    <img src="images/week6-2.jpg"
+                         alt="Week 6 Activity Photo 2">
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
 </main>
-<section id="activityGallery" class="activity-gallery">
-    <h2>Activity Photos – All Six Weeks</h2>
 
-    <div class="gallery-week-grid">
 
-        <!-- Week 1 -->
-        <div class="gallery-week">
-            <h3>Week 1</h3>
-            <div class="gallery-photo-grid">
-                <img src="images/week1-1.jpg" alt="Week 1 Photo 1">
-                <img src="images/week1-2.jpg" alt="Week 1 Photo 2">
-            </div>
-        </div>
-
-        <!-- Week 2 -->
-        <div class="gallery-week">
-            <h3>Week 2</h3>
-            <div class="gallery-photo-grid">
-                <img src="images/week2-1.jpg" alt="Week 2 Photo 1">
-                <img src="images/week2-2.jpg" alt="Week 2 Photo 2">
-            </div>
-        </div>
-
-        <!-- Week 3 -->
-        <div class="gallery-week">
-            <h3>Week 3</h3>
-            <div class="gallery-photo-grid">
-                <img src="images/week3-1.jpg" alt="Week 3 Photo 1">
-                <img src="images/week3-2.jpg" alt="Week 3 Photo 2">
-            </div>
-        </div>
-
-        <!-- Week 4 -->
-        <div class="gallery-week">
-            <h3>Week 4</h3>
-            <div class="gallery-photo-grid">
-                <img src="images/week4-1.jpg" alt="Week 4 Photo 1">
-                <img src="images/week4-2.jpg" alt="Week 4 Photo 2">
-            </div>
-        </div>
-
-        <!-- Week 5 -->
-        <div class="gallery-week">
-            <h3>Week 5</h3>
-            <div class="gallery-photo-grid">
-                <img src="images/week5-1.jpg" alt="Week 5 Photo 1">
-                <img src="images/week5-2.jpg" alt="Week 5 Photo 2">
-            </div>
-        </div>
-
-        <!-- Week 6 -->
-        <div class="gallery-week">
-            <h3>Week 6</h3>
-            <div class="gallery-photo-grid">
-                <img src="images/week6-1.jpg" alt="Week 6 Photo 1">
-                <img src="images/week6-2.jpg" alt="Week 6 Photo 2">
-            </div>
-        </div>
-
-    </div>
-</section>
+<!-- FOOTER -->
 <footer>
+
     <p>BOTANICAL SURVEY | COMMUNITY SERVICE PROJECT</p>
+
     <p>Learning from Nature, Growing for the Future 🌱</p>
+
 </footer>
 
+
+<!-- JAVASCRIPT -->
 <script src="script.js"></script>
+
 </body>
 </html>
