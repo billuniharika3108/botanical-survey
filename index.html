@@ -1,365 +1,611 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Botanical Survey | Community Service Project</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
+
 :root {
+
     --forest: #183d29;
+
     --green: #315c3e;
+
     --sage: #a8b99b;
+
+    --light-sage: #e9eee4;
+
     --cream: #f5f6ef;
+
     --white: #ffffff;
+
     --text: #26372b;
+
     --muted: #718071;
+
 }
 
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
 }
 
 html {
+
     scroll-behavior: smooth;
+
 }
 
 body {
+
     font-family: 'DM Sans', sans-serif;
+
     background: var(--cream);
+
     color: var(--text);
+
     line-height: 1.7;
+
 }
 
 /* HERO SECTION */
 
 .hero {
+
     background: linear-gradient(125deg, #183d29, #315c3e);
+
     color: white;
+
     text-align: center;
+
     padding: 75px 20px 85px;
+
     position: relative;
+
     overflow: hidden;
+
 }
 
 .hero::before,
+
 .hero::after {
+
     content: "✿";
+
     position: absolute;
+
     color: rgba(255,255,255,0.09);
+
     font-size: 190px;
+
 }
 
 .hero::before {
+
     left: -35px;
+
     top: -65px;
+
 }
 
 .hero::after {
+
     right: -35px;
+
     bottom: -90px;
+
 }
 
 .hero-content {
+
     position: relative;
+
     z-index: 1;
+
 }
 
 .leaf {
+
     font-size: 40px;
+
     margin-bottom: 12px;
+
 }
 
 .hero h1 {
+
     font-family: 'Playfair Display', serif;
+
     font-size: clamp(34px, 6vw, 55px);
+
     letter-spacing: 3px;
+
     line-height: 1.3;
+
 }
 
 .hero h2 {
+
     font-size: 17px;
+
     letter-spacing: 3px;
+
     margin: 12px 0;
+
 }
 
 .hero p {
+
     color: #dce8d8;
+
     font-size: 14px;
+
     margin-top: 17px;
+
 }
 
 /* MAIN CONTAINER */
 
 .container {
+
     max-width: 1150px;
+
     width: 92%;
+
     margin: 40px auto 70px;
+
 }
 
 section {
+
     margin-bottom: 32px;
+
 }
 
 .card {
-    background: white;
+
+    background: var(--white);
+
     border-radius: 18px;
+
     padding: 30px;
+
     box-shadow: 0 5px 25px rgba(36,62,40,0.045);
+
     border: 1px solid #e8ece4;
+
 }
 
 .section-title {
+
     font-family: 'Playfair Display', serif;
+
     font-size: 27px;
+
     color: var(--forest);
+
     margin-bottom: 22px;
+
 }
 
 /* STUDENT DETAILS */
 
 .student-grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+
     gap: 12px;
+
 }
 
 .student {
+
     background: #f2f5ee;
+
     border-radius: 10px;
+
     padding: 13px 16px;
+
     font-size: 14px;
+
     border-left: 3px solid var(--sage);
+
 }
 
 .student strong {
+
     color: var(--forest);
+
 }
 
 /* ABOUT PROJECT */
 
 .about {
+
     background: #e8eee3;
+
     border-radius: 18px;
+
     padding: 32px;
+
 }
 
 .about p {
+
     color: #536354;
+
     font-size: 15px;
+
 }
 
-/* WEEKLY ACTIVITY CARDS */
+/* SIX WEEK PHOTO CARDS */
 
 .week-grid {
+
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 22px;
+
 }
 
 .week-card {
+
     padding: 0 0 20px;
+
     overflow: hidden;
+
     text-align: left;
+
     border-radius: 17px;
+
     background: white;
+
     border: 1px solid #e5eadd;
+
     cursor: pointer;
+
     color: var(--forest);
+
     transition: 0.3s;
+
     font-family: inherit;
+
+    width: 100%;
+
 }
 
 .week-card:hover {
+
     transform: translateY(-6px);
+
     box-shadow: 0 12px 28px rgba(24,61,41,0.14);
+
 }
 
 .week-cover {
+
     width: 100%;
+
     height: 190px;
+
     object-fit: cover;
+
     display: block;
+
     background: #e9eee4;
+
+    transition: 0.4s;
+
+}
+
+.week-card:hover .week-cover {
+
+    transform: scale(1.03);
+
 }
 
 .week-card h3 {
+
     font-family: 'Playfair Display', serif;
+
     font-size: 21px;
+
     padding: 15px 17px 0;
+
 }
 
 .week-card p {
+
     color: var(--muted);
+
     font-size: 13px;
+
     padding: 0 17px;
+
 }
 
 .view-link {
+
     display: inline-block;
+
     color: var(--green);
+
     font-size: 13px;
+
     font-weight: 700;
+
     margin: 12px 17px 0;
+
 }
 
-/* WEEKLY REPORT */
+/* ACTIVITY REPORT */
 
 #activityPanel {
+
     animation: fadeIn 0.4s ease;
+
 }
 
 @keyframes fadeIn {
+
     from {
+
         opacity: 0;
+
         transform: translateY(10px);
+
     }
+
     to {
+
         opacity: 1;
+
         transform: translateY(0);
+
     }
+
 }
 
 .back-btn {
+
     background: var(--forest);
+
     color: white;
+
     border: none;
+
     border-radius: 9px;
+
     padding: 11px 19px;
+
     cursor: pointer;
+
     font-size: 14px;
+
     margin-bottom: 25px;
+
     font-family: inherit;
+
 }
 
 .back-btn:hover {
+
     background: var(--green);
+
 }
 
 .week-heading {
+
     font-family: 'Playfair Display', serif;
+
     color: var(--forest);
+
     font-size: 30px;
+
     margin-bottom: 22px;
+
 }
 
 .report-heading {
+
     font-family: 'Playfair Display', serif;
+
     font-size: 22px;
+
     color: var(--forest);
+
     margin: 10px 0 15px;
+
 }
 
 /* ACTIVITY TABLE */
 
 .table-wrap {
+
     overflow-x: auto;
+
     margin-top: 20px;
+
     border-radius: 12px;
+
     border: 1px solid #e5eadd;
+
 }
 
 table {
+
     width: 100%;
+
     border-collapse: collapse;
+
     background: white;
+
     min-width: 700px;
+
 }
 
 th {
+
     background: var(--forest);
+
     color: white;
+
     padding: 15px;
+
     text-align: left;
+
     font-size: 13px;
+
 }
 
 td {
+
     padding: 14px;
+
     border-bottom: 1px solid #edf0e9;
+
     font-size: 13px;
+
     vertical-align: top;
+
 }
 
 tr:nth-child(even) {
+
     background: #f7f9f4;
+
 }
 
 /* FOOTER */
 
 footer {
+
     background: var(--forest);
+
     color: white;
+
     text-align: center;
+
     padding: 32px 15px;
+
 }
 
 footer p:first-child {
+
     font-weight: 700;
+
     letter-spacing: 2px;
+
     font-size: 14px;
+
 }
 
 footer p:last-child {
+
     color: #d0dfca;
+
     font-size: 13px;
+
     margin-top: 7px;
+
 }
 
 /* RESPONSIVE DESIGN */
 
 @media(max-width: 700px) {
+
     .week-grid {
+
         grid-template-columns: repeat(2, 1fr);
+
     }
 
     .hero {
+
         padding: 60px 15px;
+
     }
 
-    .card,
-    .about {
+    .card, .about {
+
         padding: 22px;
+
     }
 
     .week-cover {
+
         height: 150px;
+
     }
+
 }
 
 @media(max-width: 450px) {
+
     .week-grid {
+
         grid-template-columns: 1fr;
+
     }
 
     .section-title {
+
         font-size: 23px;
+
     }
+
 }
 
 [hidden] {
+
     display: none !important;
+
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 
 <header class="hero">
+
     <div class="hero-content">
+
         <div class="leaf">🌿</div>
+
         <h1>BOTANICAL SURVEY</h1>
+
         <h2>COMMUNITY SERVICE PROJECT</h2>
+
         <p>Exploring Plants • Protecting Nature • Creating Awareness</p>
+
     </div>
+
 </header>
 
 <main class="container">
@@ -367,54 +613,87 @@ footer p:last-child {
 <!-- STUDENT DETAILS -->
 
 <section class="card">
+
     <h2 class="section-title">Student Details</h2>
+
     <div class="student-grid" id="students"></div>
+
 </section>
 
 <!-- ABOUT PROJECT -->
 
 <section class="about">
+
     <h2 class="section-title">About Our Project</h2>
+
     <p>
+
         This Community Service Project focuses on studying different
+
         types of plants, their growth, importance, environmental factors,
+
         plant genetics and conservation of endangered plant species.
+
         Through field visits and observations, we gained practical
+
         knowledge about plants and nature.
+
     </p>
+
 </section>
 
-<!-- SIX WEEK CARDS -->
+<!-- SIX WEEKS -->
 
 <section id="homeSection">
+
     <h2 class="section-title">Our Six Weeks Activities 🌱</h2>
+
     <div class="week-grid" id="weekGrid"></div>
+
 </section>
 
-<!-- INDIVIDUAL WEEK REPORT: NO PHOTOS -->
+<!-- WEEKLY ACTIVITY REPORT - NO PHOTOS -->
 
 <section class="card" id="activityPanel" hidden>
 
-    <button class="back-btn" id="backButton">
+    <button class="back-btn" id="backButton" type="button">
+
         ← Back to Home
+
     </button>
 
     <h2 class="week-heading" id="weekTitle"></h2>
 
-    <h3 class="report-heading">Daily Activity Report</h3>
+    <h3 class="report-heading">
+
+        Daily Activity Report
+
+    </h3>
 
     <div class="table-wrap">
+
         <table>
+
             <thead>
+
                 <tr>
+
                     <th>Days</th>
+
                     <th>Brief Description of the Daily Activity</th>
+
                     <th>Learning Outcome</th>
+
                     <th>Person In-charge Signature</th>
+
                 </tr>
+
             </thead>
+
             <tbody id="activityRows"></tbody>
+
         </table>
+
     </div>
 
 </section>
@@ -424,29 +703,45 @@ footer p:last-child {
 <!-- FOOTER -->
 
 <footer>
+
     <p>BOTANICAL SURVEY | COMMUNITY SERVICE PROJECT</p>
+
     <p>Learning from Nature, Growing for the Future 🌱</p>
+
 </footer>
 
 <script>
 
-/* STUDENT DETAILS */
+/* STUDENT INFORMATION */
 
 const students = [
+
     ["BILLU NIHARIKA", "24JNA05101"],
+
     ["BOYELLA INDRAJA", "24JNA05121"],
+
     ["CHAKKA SRIVALLI", "24JNA05130"],
+
     ["BUDIDA SUJITHA", "24JNA05125"],
+
     ["BOCHU ABHINAYASRI", "24JNA05103"]
+
 ];
 
 document.getElementById("students").innerHTML =
+
 students.map((student, index) => `
+
     <div class="student">
+
         ${index + 1}.
+
         <strong>${student[0]}</strong>
+
         (${student[1]})
+
     </div>
+
 `).join("");
 
 /* WEEKLY ACTIVITY DATA */
@@ -454,57 +749,99 @@ students.map((student, index) => `
 const weeks = {
 
 1: [
+
 ["Day 1", "Introduction to Community Service Project and its objectives.", "Understood the purpose of the CSP."],
+
 ["Day 2", "Discussed and planned the project topic related to plants.", "Learned how to plan project activities."],
+
 ["Day 3", "Selected the locality for conducting the project.", "Understood the importance of selecting a project area."],
+
 ["Day 4", "Prepared the required project documents.", "Learned about project documentation."],
+
 ["Day 5", "Visited Sachivalayam and discussed project permissions.", "Understood the importance of local support."],
+
 ["Day 6", "Submitted project details to the college.", "Learned the project submission process."]
+
 ],
 
 2: [
+
 ["Day 1", "Collected information about different types of plants.", "Learned about different plant varieties."],
+
 ["Day 2", "Studied the basic needs of plants and their products.", "Understood the requirements for plant growth."],
+
 ["Day 3", "Observed different plants in the local area.", "Identified different types of plants."],
+
 ["Day 4", "Learned about biodiversity and its importance.", "Understood the importance of biodiversity."],
+
 ["Day 5", "Visited farms and observed agricultural activities.", "Gained practical knowledge about farming."],
+
 ["Day 6", "Collected feedback from farmers.", "Learned about farmers' experiences."]
+
 ],
 
 3: [
+
 ["Day 1", "Collected information about different flowering plants.", "Learned about flowering plants."],
+
 ["Day 2", "Observed different varieties of flowering plants.", "Identified different flowering plant varieties."],
+
 ["Day 3", "Studied the maintenance and care of flowering plants.", "Understood how to maintain flowering plants."],
+
 ["Day 4", "Observed plant growth and flowering conditions.", "Learned about factors affecting flowering."],
+
 ["Day 5", "Visited a nursery and observed different plants.", "Gained practical knowledge about nurseries."],
+
 ["Day 6", "Collected information about nursery management.", "Understood basic nursery activities."]
+
 ],
 
 4: [
+
 ["Day 1", "Studied environmental factors affecting plant growth.", "Learned how environmental factors influence plants."],
+
 ["Day 2", "Observed the effect of sunlight on plant growth.", "Understood the importance of sunlight."],
+
 ["Day 3", "Studied the importance of water and soil.", "Learned about the basic requirements of plants."],
+
 ["Day 4", "Collected information about climatic conditions.", "Understood the relationship between climate and plants."],
+
 ["Day 5", "Observed how weather conditions affect plant growth.", "Learned about the effects of weather."],
+
 ["Day 6", "Recorded observations about environmental conditions.", "Improved observation skills."]
+
 ],
 
 5: [
+
 ["Day 1", "Collected information about plant genetics.", "Learned the basic concepts of plant genetics."],
+
 ["Day 2", "Studied characteristics inherited by plants.", "Understood how plants inherit characteristics."],
+
 ["Day 3", "Observed different plant structures and morphology.", "Learned about plant morphology."],
+
 ["Day 4", "Studied roots, stems, leaves and flowers.", "Identified the main parts of plants."],
+
 ["Day 5", "Collected information about mutations in plants.", "Learned the basic meaning of plant mutations."],
+
 ["Day 6", "Reviewed information about plant genetics and morphology.", "Improved knowledge about plant characteristics."]
+
 ],
 
 6: [
+
 ["Day 1", "Collected information about endangered plant species.", "Learned about endangered plants."],
+
 ["Day 2", "Identified reasons why some plant species are endangered.", "Understood the causes of plant endangerment."],
+
 ["Day 3", "Studied the importance of protecting endangered plants.", "Learned the importance of plant conservation."],
+
 ["Day 4", "Collected information about plant conservation measures.", "Understood methods of protecting plant species."],
+
 ["Day 5", "Studied the role of people in protecting plants and nature.", "Learned how people can support conservation."],
+
 ["Day 6", "Reviewed the six-week project activities and outcomes.", "Gained overall knowledge about plants and conservation."]
+
 ]
 
 };
@@ -516,52 +853,71 @@ const weekGrid = document.getElementById("weekGrid");
 for (let i = 1; i <= 6; i++) {
 
     const button = document.createElement("button");
+
     button.className = "week-card";
+
     button.type = "button";
 
     const img = document.createElement("img");
+
     img.src = `images/week${i}-1.jpg`;
-    img.alt = `Week ${i} cover photo`;
+
+    img.alt = `Week ${i} activity`;
+
     img.className = "week-cover";
+
     img.loading = "lazy";
 
     img.onerror = function() {
+
         this.style.display = "none";
+
     };
 
     const title = document.createElement("h3");
+
     title.textContent = `🌿 Week ${i}`;
 
     const subtitle = document.createElement("p");
-    subtitle.textContent = "Explore our activities and learning experiences.";
+
+    subtitle.textContent =
+
+        "Explore our activities and learning experiences.";
 
     const link = document.createElement("span");
+
     link.className = "view-link";
-    link.textContent = "View Activity Report →";
+
+    link.textContent = "View Activities →";
 
     button.appendChild(img);
+
     button.appendChild(title);
+
     button.appendChild(subtitle);
+
     button.appendChild(link);
 
     button.addEventListener("click", () => showWeek(i));
 
     weekGrid.appendChild(button);
+
 }
 
-/* OPEN INDIVIDUAL WEEK REPORT */
+/* SHOW WEEKLY ACTIVITY REPORT */
 
 const homeSection = document.getElementById("homeSection");
+
 const activityPanel = document.getElementById("activityPanel");
 
 function showWeek(number) {
 
     document.getElementById("weekTitle").textContent =
+
         `Week ${number} – Activity Report`;
 
-    /* DISPLAY DAILY ACTIVITY TABLE */
-
     const rows = document.getElementById("activityRows");
+
     rows.innerHTML = "";
 
     weeks[number].forEach(activity => {
@@ -569,24 +925,37 @@ function showWeek(number) {
         const row = document.createElement("tr");
 
         activity.forEach(detail => {
+
             const cell = document.createElement("td");
+
             cell.textContent = detail;
+
             row.appendChild(cell);
+
         });
 
         const signature = document.createElement("td");
+
+        signature.textContent = "";
+
         row.appendChild(signature);
 
         rows.appendChild(row);
+
     });
 
     homeSection.hidden = true;
+
     activityPanel.hidden = false;
 
     window.scrollTo({
+
         top: 0,
+
         behavior: "smooth"
+
     });
+
 }
 
 /* BACK TO HOME */
@@ -594,15 +963,21 @@ function showWeek(number) {
 document.getElementById("backButton").addEventListener("click", () => {
 
     activityPanel.hidden = true;
+
     homeSection.hidden = false;
 
     window.scrollTo({
+
         top: 0,
+
         behavior: "smooth"
+
     });
+
 });
 
 </script>
 
 </body>
+
 </html>
